@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block topmenu %}
+	<div id="TopMenuLeft">
+		<div class="bigmenuselect " menuId="m1"><a href="/">首页</a></div>
+		<div class="bigmenu " menuId="m2"><a href="/sys">集群信息</a></div>
+		<div class="bigmenu " menuId="m3"><a href="/perf">性能状况</a></div>
+		<div class="bigmenu " menuId="m4"><a href="/backup">备份管理</a></div>
+		<div class="bigmenu " menuId="m5"><a href="/setup">系统设置</a></div>
+		<div style="clear: both"></div>
+	</div>
+	<div id="TopMenuright"></div>
+	<div style="clear: both"></div>
+{% endblock %}
+
+{% block leftbar %}
+<div class="dtree" onload="javascript:d.openAll();">
+	<script type="text/javascript">
+	d = new dTree('d');
+	d.add(0,-1,' MyOPS');	
+	{% for h in nodes %}
+		d.add({{ h.tid }},{{ h.pid }},'{{ h.name }}','','not set the title','frmright','/statics/{{ h.type }}-icon.gif','/statics/{{ h.type }}-icon.gif');
+	{% endfor %}
+	document.write(d);
+	</script>
+</div>
+{% endblock %}
+
+{% block content %}
+		<iframe id="frmright" name="frmright" frameBorder="0" scrolling="no" src="statics/intro.html" style="height:100%;visibility:inherit;width:100%;z-index:1"></iframe>
+{% endblock %}

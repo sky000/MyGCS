@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block leftbar %}
+<div class="dtree">
+	<script type="text/javascript">
+	d = new dTree('d');
+	d.add(0,-1,'');	
+	{% for h in host_list %}
+		d.add({{ h.tid }},{{ h.pid }},'{{ h.name }}','/d/{{ h.type }}/{{ h.id }}','not set the title','_self','/statics/{{ h.type }}-icon.gif','/statics/{{ h.type }}-icon.gif');
+	{% endfor %}
+	document.write(d);
+	</script>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="dtree">
+	<script type="text/javascript">
+	d = new dTree('d');
+	d.add(0,-1,'');	
+	{% for h in host_list %}
+		d.add({{ h.tid }},{{ h.pid }},'{{ h.name }}','/d/{{ h.type }}/{{ h.id }}','not set the title','_self','/statics/{{ h.type }}-icon.gif','/statics/{{ h.type }}-icon.gif');
+	{% endfor %}
+	document.write(d);
+	</script>
+</div>
+{% endblock %}
+
+{% block topmenu %}
+	<div id="TopMenuLeft">
+		<div class="bigmenu " menuId="m1"><a href="/d/host">首页</a></div>
+		<div class="bigmenu " menuId="m2"><a href="/pages/siteSummaryReport">系统</a></div>
+		<div class="bigmenu " menuId="m3"><a href="/pages/chart">性能</a></div>
+		<div class="bigmenu " menuId="m4"><a href="/pages/searchReport">配置</a></div>
+		<div style="clear: both"></div>
+	</div>
+	<div id="TopMenuright"></div>
+	<div style="clear: both"></div>
+{% endblock %}

@@ -1,0 +1,27 @@
+<html>
+<link rel="StyleSheet" href="/statics/style.css" type="text/css" />
+<link rel="StyleSheet" href="/statics/dtree.css" type="text/css" />
+<script type="text/javascript" src="/statics/dtree.js"></script>
+	<head>
+		<title>{% block title %}MyOPS - MySQL Manage System {% endblock %}</title>
+	</head>
+	<body>
+		<div class="topDiv">
+			<div class="topL leaf"></div>
+			<div class="clear"></div>
+		</div>
+		<div id="TopMenu">
+			{% block topmenu %} Empty topmenu Block {% endblock %}
+		</div>
+		<div style="height: 10px;"></div>
+		<div id="content">
+			<div id="leftbar">
+				{% block leftbar %} Empty leftbar Block {% endblock %}	
+			</div>
+			<div id="maincontent">
+				{% block content %} Empty Content Block {% endblock %}			
+			</div>
+		</div>
+
+	</body>
+</html>

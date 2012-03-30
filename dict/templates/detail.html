@@ -1,0 +1,23 @@
+{% extends "dict_base.html" %}
+
+{% block subnavi %}
+	<div id="subnavi">
+		<ul>
+		{% for n in navis %}
+			<li>></li>
+			<li><a href="{{ n.href }}">{{ n.name }}</a></li>
+		{% endfor %}
+		</ul>
+		<div style="clear: both"></div>
+	</div>
+	<div style="clear: both"></div>
+{% endblock %}
+
+
+{% block subcontent %}
+	<div id="subcontent">
+		<div style="clear: both"></div>
+		subcontent block
+	</div>
+	<div style="clear: both"></div>
+{% endblock %}
