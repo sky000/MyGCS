@@ -68,7 +68,7 @@ STATIC_URL = '/statics/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
-STATICFILES_DIRS = ('/home/sky/work/code/python/myperf/myperf-1.0/myops/statics',
+STATICFILES_DIRS = ('/home/sky/work/code/python/MyGCS/statics',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -100,10 +100,13 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'myops.urls'
+ROOT_URLCONF = 'MyGCS.urls'
 
-TEMPLATE_DIRS = ("/home/sky/work/code/python/myperf/myperf-1.0/myops/templates",
-                 "/home/sky/work/code/python/myperf/myperf-1.0/myops/dict/templates",
+TEMPLATE_DIRS = ("/home/sky/work/code/python/MyGCS/templates",
+                 "/home/sky/work/code/python/MyGCS/dict/templates",
+                 "/home/sky/work/code/python/MyGCS/perf/templates",
+                 "/home/sky/work/code/python/MyGCS/backup/templates",
+                 "/home/sky/work/code/python/MyGCS/setup/templates",
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

@@ -17,11 +17,12 @@
 <div class="dtree">
 	<script type="text/javascript">
 	d = new dTree('d');
-	d.add(0,-1,' MyOPS');	
+	d.add(0,-1,' MyGCS');	
 	{% for h in nodes %}
 		d.add({{ h.tid }},{{ h.pid }},'{{ h.name }}','/sys/{{ h.type }}/{{ h.id }}','not set the title','frmright','/statics/{{ h.type }}-icon.gif','/statics/{{ h.type }}-icon.gif');
 	{% endfor %}
 	document.write(d);
+	d.openAll();
 	</script>
 </div>
 {% endblock %}
