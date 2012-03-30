@@ -122,15 +122,6 @@ body {
 	background: #FDFEFF;
 }
 
-#subcontent {
-	float: top;
-	width: 750px;
-	padding-left: 10px;
-	padding-top:5px;
-	padding-right:10px;
-	padding-bottom:10px;
-	background: #FDFEFF;
-}
 
 #intro {
 	float: top;
@@ -149,7 +140,6 @@ body {
 
 #subnavi {
 	float:top;
-	padding-left:10px;
 }
 
 #subnavi ul {
@@ -159,15 +149,44 @@ body {
 #subnavi ul li {
 	list-style:none;
 	float:left;
-	padding:0 10px 0 10px;
+	padding:0 5px 0 0;
 }
 
-#topSocial {
-	position:absolute;
-	right:0;
-	top:50px;
+
+#subcontent {
+	float: top;
+	padding-left: 10px;
+	padding-top:5px;
+	padding-right:10px;
+	padding-bottom:10px;
+	background: #FDFEFF;
 }
 
+.detailtb{
+	border-width:1px;
+	border-style:solid;
+	border-color:#3f8acb;
+	border-collapse:collapse;
+	margin:5px;
+}
+
+.detailtb tr{
+	border-width:1px;
+	border-style:solid;
+	border-color:#3f8acb;
+	border-collapse:collapse;
+	margin:5px;
+}
+
+.tbheader{
+	background: #aaaaaa;
+	text-align: center;
+}
+
+.tbtr{
+	background: #eeeeee;
+	text-align: left;
+}
 
 fieldset{
 	border-style:solid;
