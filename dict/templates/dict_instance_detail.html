@@ -1,0 +1,26 @@
+{% extends "dict_base.html" %}
+
+{% block subnavi %}
+	<div id="subnavi">
+		<ul>
+		{% for n in navis %}
+			<li>-</li>
+			<li><a href="{{ n.href }}">{{ n.name }}</a></li>
+		{% endfor %}
+		</ul>
+		<div style="clear: both"></div>
+	</div>
+	<div style="clear: both"></div>
+{% endblock %}
+
+
+{% block subcontent %}
+	<div id="subcontent">
+		<div style="clear: both"></div>
+		<table class="detailtable">
+			<tr class="tbheader"><td>HOST</td><td>INSTANCE</td><td>DBA</td><td>VERSION</td><td>VERSION COMMENT</td><td>ADD TIME</td><td>LAST MODIFY</td><td>ACTION</td></tr>
+			<tr class="tbtr"><td><a href="/sys/host/{{ host.id}}">{{ host.name }}</a></td><td>{{ instance.name }}</td><td>{{ instance.dba_contacter }}</td><td>{{ instance.version }}</td><td>{{ instance.version_commnet }}</td><td>{{ host.gmt_created }}</td><td>{{ host.gmt_modified }}</td><td><a href="#">EDIT</a></td></tr>
+		</table>
+	</div>
+	<div style="clear: both"></div>
+{% endblock %}

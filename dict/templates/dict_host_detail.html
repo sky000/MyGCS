@@ -17,7 +17,10 @@
 {% block subcontent %}
 	<div id="subcontent">
 		<div style="clear: both"></div>
-		subcontent block
+		<table class="detailtable">		
+			<tr class="tbheader"><td>HOST</td><td>CONTACTER</td><td>OS</td><td>ADD TIME</td><td>LAST MODIFY</td><td>ACTION</td></tr>
+			<tr class="tbtr"><td>{{ host.name }}</td><td>{{ host.ops_contacter }}</td><td>{{ host.os_info }}</td><td>{{ host.gmt_created }}</td><td>{{ host.gmt_modified }}</td><td><a href="#">EDIT</a></td></tr>
+		</table>
 	</div>
 	<div style="clear: both"></div>
 {% endblock %}

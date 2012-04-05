@@ -14,7 +14,7 @@ def detail(request,instance_id):
     navis.append({'href':'/sys/host/'+str(i.host_id),'name':h.name})
     navis.append({'href':'/sys/instance/'+str(i.id),'name':i.name})
     
-    return render_to_response('detail.html', {'navis': navis, 'host': h})
+    return render_to_response('dict_instance_detail.html', {'navis': navis, 'instance':i,'host': h})
 
 def update(request,host_id):
     h = request.POST
